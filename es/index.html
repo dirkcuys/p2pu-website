@@ -1,0 +1,344 @@
+---
+---
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ site.description }}">
+	<link rel="canonical"
+	      href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{{ "/assets/css/p2pu-index.css" | prepend: site.baseurl }}">
+	<link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
+
+	<script src="{{ "/assets/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
+</head>
+
+<body>
+
+<section class="splash">
+	<div class="background"></div>
+	<nav class="navbar" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-toggle" data-toggle="collapse"
+				   data-target="#nav-links-collapse"> <i class="fa fa-bars"></i> </a> <a
+					class="navbar-logo pull-left" href="{{ site.baseurl }}"> <img
+					src="{{ "/assets/images/p2pu-logo-2x.png" | prepend: site.baseurl }}"
+					alt="P2PU Logo" width="122" /> </a> <a class="p2pu-tab" href="#"> <i
+					class="fa fa-chevron-down p2pu-tab-icon"></i> </a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="nav-links-collapse">
+
+				<ul class="nav navbar-nav navbar-right">
+					{% for link in site.data.navigation.en %}
+						<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
+							<a href="{{ site.baseurl }}{{ link.url }}">
+								{{ link.text }}
+							</a>
+							{% if link.submenu %}
+								<span class="fa fa-caret-down dropdown-toggle visible-xs-block visible-sm-block"
+								      data-toggle="dropdown"></span>
+								<ul class="dropdown-menu nav navbar-nav subnav" role="menu">
+									{% for sublink in link.submenu %}
+										<li {% if page.url contains sublink.url %}class="active"{% endif %}>
+											{% if sublink.url contains 'http://' or sublink.url contains '#' %}
+												<a href="{{ sublink.url }}"
+												   {% if sublink.url contains 'http://' %}target="_blank"{% endif %}>
+													{{ sublink.text }}
+												</a>
+											{% else %}
+												<a href="{{ site.baseurl }}{{ sublink.url }}">
+													{{ sublink.text }}
+												</a>
+											{% endif %}
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<div>
+		<div class="banner">
+			<div class="container">
+				<div class="row">
+					<header class="col-md-12">
+						We build learning communities <br />on the web
+					</header>
+					<p class="col-md-12 subheader">Open tools + Community + Design + Support</p>
+
+					<p class="text-center">
+						<a class="btn btn-lg btn-cta" href="http://community.p2pu.org/t/please-introduce-yourself/28"> Help Me Create a Course </a>
+					</p>
+				</div>
+			</div>
+			<div class="featured-headline">
+				<div class="container">
+					<div class="text-center">
+						<header class="title">Playful, networked learning experiences that last</header>
+
+						<p class="col-md-8 col-md-offset-2 body">
+							Instead of lonely, anonymous online courses, our communities sustain interest and
+							engagement because folks build them together. We are open and welcoming in everything
+							we do, and help folks generally feel comfy on the internet.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</section>
+
+<section class="page-content">
+
+	<div class="container">
+		<section class="know-believe row">
+			<div class="col-md-5 left">
+				<div class="text-center divider-left">
+					<span><i class="fa fa-heart fa-3x"></i></span>
+					<hr />
+				</div>
+
+				<h3 class="title text-center">We Believe:</h3>
+				<ul class="fa-ul">
+						<li><i class="fa-li fa fa-check-square"></i>
+						<h4>The power of community is transformative</h4>
+						The future of learning is not in "disruptive" technologies. It lies in the power of
+						people exploring together.
+					</li>
+					<li><i class="fa-li fa fa-check-square"></i>
+						<h4>Open is the best way to work</h4>
+						Anyone can join, make or contribute to a P2PU experience. We are a 100% open
+						organisation.
+					</li>
+					<li><i class="fa-li fa fa-check-square"></i>
+						<h4>Peers working together can move mountains</h4>
+						Our courses nurture sharing, connection, and help folks feel generally comfortable on
+						the internet.
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-2 visible-md-block visible-lg-block">
+				<div class="text-center divider-center"><span><i
+						class="fa fa-adjust fa-1x fa-rotate-90"></i></span>
+				</div>
+			</div>
+			<div class="col-md-5 right">
+				<div class="text-center"><span><i class="fa fa-check-square-o fa-3x"></i></span>
+					<hr />
+				</div>
+				<h3 class="title text-center">We Know:</h3>
+				<ul class="fa-ul">
+					<li><i class="fa-li fa fa-check-square"></i>
+						<h4>Real people sustain engagement</h4>
+						Working with your peers keeps you engaged in a course.
+					</li>
+					<li><i class="fa-li fa fa-check-square"></i>
+						<h4>Feedback improves projects</h4>
+						Deep, substantative feedback makes your project better.
+					</li>
+					<li><i class="fa-li fa fa-check-square"></i>
+						<h4>Comfort leads to learning</h4>
+						When you tinker, play and feel comfortable, you spend more time on a learning project.
+					</li>
+					<li><i class="fa-li fa fa-check-square"></i>
+						<h4>There are several paths to the answer</h4>
+						People learn in different ways, and we design for diversity.
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<section class="who">
+		<div class="container">
+			<div class="col-md-8">
+				<h3>Who are we?</h3>
+				<h4>A passionate & powerful team of mostly volunteers.</h4>
+
+				<p>
+					P2PU would be nothing without our inspiring community, who are the core of our open
+					activities. This community is made up of people from all over the world, who are working
+					together to build a new kind of university online. Sound good? Then we'd love you to join
+					us.
+				</p>
+
+				<a class="people-link fa-long-arrow-right" href="{{ site.baseurl }}/en/about/people/"> Meet
+					the community </a>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<h3>How we work</h3>
+
+			<div class="row feature left">
+				<a href="http://community.p2pu.org/t/please-introduce-yourself/28/70"
+				   class="image col-md-6 fa-beer" target="_blank"> <img
+						src="{{ "/assets/images/index/community.jpg"|prepend:site.baseurl }}"
+						alt="Community support image"> </a>
+
+				<div class="content col-md-6">
+					<h3 class="header">We are a community</h3>
+
+					<p>
+						We're a group of learners, coders, thinkers, practitioners, educators and organizers. We
+						come together on our Discourse community to share resources, recommendations and support
+						each other to build learning communities.
+					</p>
+				</div>
+			</div>
+			<div class="row feature right">
+				<a href="#courses"
+				   class="image col-md-6 fa-cubes" target="_blank"> <img
+						src="{{ "/assets/images/index/community-online.png"|prepend:site.baseurl }}"
+						alt="Community support image"> </a>
+
+				<div class="content col-md-6">
+					<h3 class="header">We build learning communities online</h3>
+
+					<p>
+						We craft great online learning experiences using the best tools for the job.
+					</p>
+				</div>
+			</div>
+			<div class="row feature left">
+				<a href="{{ site.baseurl }}/en/publications/reports/" class="image col-md-6
+				fa-bar-chart-o"> <img
+						src="{{ "/assets/images/index/reports.jpg"|prepend:site.baseurl }}"
+						alt="Reports image"> </a>
+
+				<div class="content">
+					<h3 class="header">We make how-to's and toolkits </h3>
+
+					<p>
+						We document how we make engaging, innovative, sustainable learning experiences,
+						and we create tools to help you make your own.
+					</p>
+				</div>
+			</div>
+			<div class="row feature right">
+				<a href="{{ site.baseurl }}/en/publications/roundtables/" class="image col-md-6
+				fa-bullhorn"> <img
+						src="{{ "/assets/images/index/roundtables.jpg"|prepend:site.baseurl }}"
+						alt="Roundtables image"> </a>
+
+				<div class="content col-md-6">
+					<h3 class="header">We answer the hard questions</h3>
+
+					<p>
+						We have a regular round table where we discuss big questions in open online learning,
+						share our successes and learn from each other. Guests include folks from Khan Academy,
+						Hack Education, Mozilla and NYU.
+					</p>
+				</div>
+			</div>
+			<div class="row feature left">
+				<a href="{{ site.baseurl }}/en/publications/talks/" class="image col-md-6 fa-comment"> <img
+						src="{{ "/assets/images/index/talks.jpg"|prepend:site.baseurl }}" alt=""> </a>
+
+				<div class="content col-md-6">
+					<h3 class="header">We give talks and workshops</h3>
+
+					<p>
+						We go to conferences to shareour expertise on learning technology, community design and
+						openness.
+					</p>
+				</div>
+			</div>
+			<div class="row feature right">
+				<a href="http://howto.p2pu.org/" class="image col-md-6 fa-code-fork"> <img
+						src="{{ "/assets/images/index/open-courses.png"|prepend:site.baseurl }}" alt=""> </a>
+
+				<div class="content col-md-6">
+					<h3 class="header">We help folks make open courses and tools</h3>
+
+					<p>
+						If you're looking to make a course, get started with our "School in a Box." We also
+						provide consulting services in learning design, technical implementation and community-building.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="courses" id="courses">
+		<div class="container courses-inner">
+			<h3 class="header">Just here to learn something?</h3>
+
+			<p>
+				We offer a great variety of community built courses along with some that were produced in
+				collaboration with our partners
+			</p>
+
+			<div class="row featured-courses">
+				{% for course in site.data.courses %}
+					<a class="course-thumb col-md-3" href="{{ course.url }}" target="_blank"> <img
+							src="{{ site.baseurl }}/assets/images/index/courses/{{ course.image }}"
+							alt="{{ course.name }} Cover Image" />
+
+						<div class="course-title">
+							{{ course.name }}
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+
+			<div class="pull-right">
+				<a class="btn btn-success" href="https://p2pu.org/en/groups/list/community/"
+				   target="_blank"> Show Me All Courses <i class="fa fa-angle-double-right"></i> </a>
+			</div>
+		</div>
+	</section>
+
+	<section class="partners">
+		<div class="container">
+			<h4>Our collaborators and clients include:</h4>
+
+			<div class="partners-inner">
+				{% for partner in site.data.partners %}
+					<img
+							src="{{ '/assets/images/index/partners' | prepend: site.baseurl }}/{{ partner.image }}"
+							alt="{{ partner.name }} Logo" width="150"
+							class="col-md-2" />
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+
+</section>
+
+{% include footer-en.html %}
+
+{% include donate-modal.html %}
+
+{% include scripts.html %}
+
+{% include ga.html %}
+
+</body>
+</html>
