@@ -5,7 +5,7 @@ description: "A University for the Web. Built by an open community. LEARNING BY 
 EVERYONE. ABOUT ALMOST ANYTHING. COMPLETELY FREE."
 baseurl:
 url: "http://p2pu.org"
-languages: ['en']
+languages: ['en', 'es']
 default_language: 'en'
 
 # Build settings

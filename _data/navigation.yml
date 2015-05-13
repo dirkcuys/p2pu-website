@@ -1,7 +1,4 @@
 en:
-  - text: Our work
-    url: /en/our-work/
-
   - text: About
     url: /en/about/
     submenu:
@@ -11,6 +8,9 @@ en:
       url: /en/about/people/
     - text: Credits and thanks
       url: /en/about/credits/
+
+  - text: Our work
+    url: /en/our-work/
 
   - text: Publications
     url: /en/publications/roundtables/
@@ -28,3 +28,34 @@ en:
 
   - text: Connect with us
     url: /en/connect/
+
+es:
+  - text: Sobre
+    url: /es/about/
+    submenu:
+    - text: Philosophy
+      url: /es/about/philosophy/
+    - text: Quien somos
+      url: /es/about/people/
+    - text: Credits and thanks
+      url: /es/about/credits/
+
+  - text: Nuestro trabajo
+    url: /es/our-work/
+
+  - text: Publicasiones
+    url: /es/publications/roundtables/
+    submenu:
+    - text: P2PU sobre mesas
+      url: /es/publications/roundtables/
+    - text: Presentations
+      url: /es/publications/talks/
+    - text: reports
+      url: /es/publications/reports/
+    - text: blog
+      url: /es/publications/blog/
+    - text: data
+      url: http://data.p2pu.org/
+
+  - text: Contactanos
+    url: /es/connect/
